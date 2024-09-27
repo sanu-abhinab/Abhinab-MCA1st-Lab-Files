@@ -1,4 +1,4 @@
-\\C Programe to check is a string is palindrome.
+//C Programe to check is a string is palindrome.
 
 #include<stdio.h>
 #include<string.h>
