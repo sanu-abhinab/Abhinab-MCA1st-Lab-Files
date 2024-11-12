@@ -1,0 +1,118 @@
+\documentclass{beamer}
+\usepackage{amsmath}
+\usepackage{color}
+
+\title{Jump Statements in C Programming}
+\author{Abhinab Dowerah, Roll No. 10, MCA 1st}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\begin{frame}{Introduction}
+    \begin{itemize}
+        \item Jump statements in C allow for the control of program flow by skipping over parts of code.
+        \item They provide an alternative to structured control statements like loops and conditionals.
+        \item There are four types of Jump Statements:
+        \begin{itemize}
+            \item \texttt{break}
+            \item \texttt{continue}
+            \item \texttt{goto}
+            \item \texttt{return}
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{The \texttt{break} Statement}
+    \begin{itemize}
+        \item The break statement exits or terminate the loop or switch statement based on a certain condition, without executing the remaining code.
+        \item The statements inside the loop are executed sequentially.
+    \end{itemize}
+    \vspace{0.3cm}
+    \textbf{Example: Exit Loop on a Specific Condition}
+    \begin{block}{}
+        \texttt{\#include <stdio.h>}\\
+        \texttt{int main() \{}\\
+        \texttt{\ \ for (int i = 1; i <= 10; i++) \{}\\
+        \texttt{\ \ \ \ if (i == 5) \{ break; \}}\\
+        \texttt{\ \ \ \ printf("\%d ", i);}\\
+        \texttt{\ \ \}}\\
+        \texttt{\ \ return 0;}\\
+        \texttt{\}}
+    \end{block}
+    \textbf{Real-life Example:} Exiting a search once an item is found in a list.
+\end{frame}
+
+\begin{frame}{The \texttt{continue} Statement}
+    \begin{itemize}
+        \item The continue statement in C is used to skip the remaining code after the continue statement within a loop and jump to the next iteration of the loop.
+        
+    \end{itemize}
+    \vspace{0.3cm}
+    \textbf{Example: Skip Printing Even Numbers}
+    \begin{block}{}
+        \texttt{\#include <stdio.h>}\\
+        \texttt{int main() \{}\\
+        \texttt{\ \ for (int i = 1; i <= 10; i++) \{}\\
+        \texttt{\ \ \ \ if (i \% 2 == 0) \{ continue; \}}\\
+        \texttt{\ \ \ \ printf("\%d ", i);}\\
+        \texttt{\ \ \}}\\
+        \texttt{\ \ return 0;}\\
+        \texttt{\}}
+    \end{block}
+    \textbf{Real-life Example:} Skipping over irrelevant data points in data analysis.
+\end{frame}
+
+\begin{frame}{The \texttt{goto} Statement}
+    \begin{itemize}
+        \item The goto statement is used to jump to a specific point from anywhere in a function.
+        \item It is used to transfer the program control to a labeled statement within the same function.
+    \end{itemize}
+    \vspace{0.3cm}
+    \textbf{Example: Using \texttt{goto} for Error Handling}
+    \begin{block}{}
+        \texttt{\#include <stdio.h>}\\
+        \texttt{int main() \{}\\
+        \texttt{\ \ int i = 10;}\\
+        \texttt{\ \ if (i < 0) goto error;}\\
+        \texttt{\ \ printf("Processing...\textbackslash n");}\\
+        \texttt{\ \ error: printf("Error encountered!\textbackslash n");}\\
+        \texttt{\ \ return 0;}\\
+        \texttt{\}}
+    \end{block}
+    \textbf{Real-life Example:} Handling unexpected errors in low-level system programming.
+\end{frame}
+
+\begin{frame}{The \texttt{return} Statement}
+    \begin{itemize}
+        \item The return statement in C is used to terminate the execution of a function and return a value to the caller.
+        \item It is commonly used to provide a result back to the calling code.
+    \end{itemize}
+    \vspace{0.3cm}
+    \textbf{Example: Return with a Value}
+    \begin{block}{}
+        \texttt{\#include <stdio.h>}\\
+        \texttt{int add(int a, int b) \{}\\
+        \texttt{\ \ return a + b;}\\
+        \texttt{\}}\\
+        \texttt{int main() \{}\\
+        \texttt{\ \ int sum = add(3, 4);}\\
+        \texttt{\ \ printf("Sum: \%d", sum);}\\
+        \texttt{\ \ return 0;}\\
+        \texttt{\}}
+    \end{block}
+    \textbf{Real-life Example:} Returning values from helper functions in larger programs.
+\end{frame}
+
+\begin{frame}{Conclusion}
+    \begin{itemize}
+        \item Jump statements provide flexibility in managing program flow.
+        \item While powerful, their misuse can lead to unreadable code.
+        \item Use them judiciously to improve code efficiency and clarity.
+    \end{itemize}
+\end{frame}
+
+\end{document}
